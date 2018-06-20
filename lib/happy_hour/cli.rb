@@ -1,0 +1,7 @@
+class HappyHour::CLI
+
+
+
+
+
+end

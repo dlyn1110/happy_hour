@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+
+HappyHour::CLI.new.call
