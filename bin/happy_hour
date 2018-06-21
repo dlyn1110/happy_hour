@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+require 'bundler/setup'
+require './lib/happy_hour'
 
 
 HappyHour::CLI.new.call
