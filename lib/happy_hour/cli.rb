@@ -44,10 +44,11 @@ class HappyHour::CLI
        elsif input == "7"
          puts "List of Williamsburg Bars"
        elsif input == "exit"
-         goodbye
+         puts "Please choose number from list"
       end
+      
   end
-       
+
     def goodbye
       puts "Thanks for visiting! Come back soon!!!"
     end

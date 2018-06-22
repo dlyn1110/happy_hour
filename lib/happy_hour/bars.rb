@@ -12,3 +12,4 @@ attr_accessor :name, :neighborhood, :address, :bar_description
   def scrape
 
   end
+end
