@@ -1,7 +1,7 @@
 
 class HappyHour::Bar
 
-attr_accessor :name, :neighborhood, :address, :bar_description
+attr_accessor :name, :bar_description
 
   @@bars = []
 
@@ -14,8 +14,12 @@ attr_accessor :name, :neighborhood, :address, :bar_description
   end
 
   def self.scrape_bars
-    doc = Nokogiri::HTML(open('https://www.theinfatuation.com/new-york/guides/the-best-brooklyn-happy-hours'))
-    # doc.css('.spot-block__title').each do |bar|
+    doc = Nokogiri::HTML(open('https://www.amny.com/eat-and-drink/brooklyn-s-best-bar-deals-happy-hours-free-snacks-games-and-more-1.11756526'))
+    doc.css('.mediaCell').each do |bar|
+      {
+    name = doc.css('h2').text
+    bar_description = doc.css('p')[4].text
+       }
     binding.pry
     end
   end
