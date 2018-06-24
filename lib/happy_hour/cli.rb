@@ -1,11 +1,13 @@
 class HappyHour::CLI
 
   def call
+
     puts "Welcome To the Best Happy Hour Bar Source That Brooklyn Has To Offer!!!"
     main_menu
     more_info
     goodbye
-  end
+ end
+
 
 
  def main_menu
