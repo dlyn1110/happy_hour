@@ -26,7 +26,6 @@ class HappyHour::CLI
    puts "6. Park Slope"
    puts "7. Williamsburg"
    puts ""
-
   end
 
    def more_info
