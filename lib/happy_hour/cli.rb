@@ -1,19 +1,12 @@
 class HappyHour::CLI
 
   def call
-    greeting
+    puts "Welcome To the Best Happy Hour Bar Source That Brooklyn Has To Offer!!!"
     main_menu
     more_info
     goodbye
   end
 
- def greeting
-   puts ""
-   puts "Welcome To the Best Happy Hour Bar Source That Brooklyn Has To Offer!!!"
-   puts ""
-  #  puts "Please choose numbers 1-7 for desired neighborhood:"
-  #  puts ""
- end
 
  def main_menu
    puts "Please choose numbers 1-7 for desired neighborhood:"
@@ -28,9 +21,8 @@ class HappyHour::CLI
    puts ""
   end
 
-   def more_info
-
-     input = nil
+  def more_info
+   input = nil
       while input != 'exit'
        puts ""
        input = gets.strip.downcase
