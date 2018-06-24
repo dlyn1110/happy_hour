@@ -13,7 +13,7 @@ attr_accessor :name, :neighborhood, :address, :bar_description
     @@bars
   end
 
-  def self.scrape_bar_site
+  def self.scrape_bars
     doc = Nokogiri::HTML(open('https://www.theinfatuation.com/new-york/guides/the-best-brooklyn-happy-hours'))
     doc.css('.spot-block__title').each do |bar|
     
