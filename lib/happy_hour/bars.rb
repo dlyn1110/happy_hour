@@ -1,13 +1,16 @@
 
-class HappyHour::Bars
+class HappyHour::Bar
 
 attr_accessor :name, :neighborhood, :address, :bar_description
-
+  
+  @@bars = []
+   
   def initialize
-    @name = name
-    @neighborhood = neighborhood
-    @address = address
-    @bar_description = bar_description
+    @@bars << self
+  end
+  
+  def self.all
+    @@bars
   end
 
   def self.scrape_bar_site
