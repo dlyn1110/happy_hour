@@ -1,49 +1,39 @@
 class HappyHour::CLI
 
   def call
-
-    HappyHour::Bar.scrape_bars
     puts "Welcome To the Best Happy Hour Bar Source That Brooklyn Has To Offer!!!"
     puts "----------------------------------------"
-    puts "Please enter number for Happy Hour Bar of choice:"
+    puts "For main list of bars, type 'list', to leave type 'exit'."
     puts ""
-    main_menu
+    HappyHour::Bar.scrape_bars
+    bar_list
+    more_info
     goodbye
   end
 
 
-   def main_menu
-     HappyHour::Bar.all.each.with_index
+   def bar_list
+     HappyHour::Bar.all.each.with_index(1) do |bar, i|
      puts "#{i}. #{bar.name}"
+     end
    end
 
-  def more_info
-   input = nil
+   def more_info
+     input = nil
       while input != 'exit'
-       puts ""
-       input = gets.strip.downcase
+        input = gets.strip.downcase
 
-       if input =="1"
-         puts " List of Bed-Stuy Bars"
-       elsif input == "2"
-         puts "List of Bushwick Bars"
-       elsif input == "3"
-         puts "List Cobble Hill/Boerum Hill/Carroll Gardens Bars"
-       elsif input == "4"
-         puts "List of Dumbo/Brooklyn Heights Bars"
-       elsif input == "5"
-         puts "List of Greenpoint Bars"
-       elsif input == "6"
-         puts "List of Park Slope Bars"
-       elsif input == "7"
-         puts "List of Williamsburg Bars"
-       elsif input == "menu"
-         main_menu
-       else input == 'exit'
-         break
+       if @input.to_i.between?(1, HappyHour::Bar.all.length)
+       # after input bar title and description displays
+        puts "#{bar.name}"
+        puts "#{bar.descrption}"
+        puts "For main list of bars, type 'list', to leave type 'exit'."
+        elsif input == 'list'
+          bar_list
+        else input == 'exit'
+       end
+     end
     end
-   end
-  end
 
     def goodbye
       puts "Thanks for visiting! Come back soon!!!"
