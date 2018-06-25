@@ -2,26 +2,20 @@ class HappyHour::CLI
 
   def call
 
+    HappyHour::Bar.scrape_bars
     puts "Welcome To the Best Happy Hour Bar Source That Brooklyn Has To Offer!!!"
+    puts "----------------------------------------"
+    puts "Please enter number for Happy Hour Bar of choice:"
+    puts ""
     main_menu
-    more_info
     goodbye
- end
-
-
-
- def main_menu
-   puts "Please choose numbers 1-7 for desired neighborhood:"
-   puts ""
-   puts "1. Bed-Stuy"
-   puts "2. Bushwick"
-   puts "3. Cobble Hill/Boerum Hill/Carroll Gardens"
-   puts "4. Dumbo/Brooklyn Heights"
-   puts "5. Greenpoint"
-   puts "6. Park Slope"
-   puts "7. Williamsburg"
-   puts ""
   end
+
+
+   def main_menu
+     HappyHour::Bar.all.each.with_index
+     puts "#{i}. #{bar.name}"
+   end
 
   def more_info
    input = nil
@@ -54,5 +48,4 @@ class HappyHour::CLI
     def goodbye
       puts "Thanks for visiting! Come back soon!!!"
     end
-
   end
