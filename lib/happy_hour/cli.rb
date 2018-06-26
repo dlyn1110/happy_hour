@@ -2,10 +2,9 @@ class HappyHour::CLI
 
   def call
     puts ""
-    puts "Welcome To the Best Happy Hour Bar Source That Brooklyn Has To Offer!!!"
-    puts "----------------------------------------"
-    puts "Enter number for details about bar of choice:"
+    puts "Welcome! Let's get your Happy on!!!"
     puts ""
+    puts "----------------------------------------"
     puts "----------------------------------------"
     HappyHour::Bar.scrape_bars
     bar_list
@@ -17,22 +16,27 @@ class HappyHour::CLI
    def bar_list
      HappyHour::Bar.all.each.with_index(1) do |bar, i|
      puts "#{i}. #{bar.name}"
+        #binding.pry
      end
    end
 
    def more_info
      input = nil
       while input != 'exit'
+        puts ""
+        puts "Enter number for details for bar of choice:"
         input = gets.strip.downcase
+       if input.to_i > 0 && input.to_i <= HappyHour::Bar.all.length
+          bar = HappyHour::Bar.all
 
-       if @input.to_i.between?(1, HappyHour::Bar.all.length)
-       # after input bar title and description displays
-        puts "#{ba.name}"
-        puts "#{bar.descrption}"
+        puts "#{bar.name}"
+        puts "#{bar.description}"
+        puts ""
         puts "For main list of bars, type 'list', to leave type 'exit'."
         elsif input == 'list'
           bar_list
         else input == 'exit'
+          #inding.pry
        end
      end
     end
