@@ -25,6 +25,7 @@ class HappyHour::CLI
       while input != 'exit'
         puts ""
         puts "Enter number for details for bar of choice:"
+        puts ""
         input = gets.strip.downcase
        if input.to_i > 0 && input.to_i <= HappyHour::Bar.all.length
           bar = HappyHour::Bar.all
@@ -36,7 +37,7 @@ class HappyHour::CLI
         elsif input == 'list'
           bar_list
         else input == 'exit'
-          #inding.pry
+        #binding.pry
        end
      end
     end
