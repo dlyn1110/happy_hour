@@ -1,6 +1,6 @@
 # HappyHour
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/happy_hour`. To experiment with that code, run `bin/console` for an interactive prompt.
+The HappyHour Gem is a CLI application that will provide the top places in Brooklyn to have Happy Hour. You will be able to select a bar of your choice to find out detailed information.
 
 TODO: Delete this and the text above, and describe your gem
 
@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+In the terminal run 'bin/happy_hour' to begin HappyHour prompts.
 
 ## Development
 
