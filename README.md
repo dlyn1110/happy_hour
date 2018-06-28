@@ -2,7 +2,6 @@
 
 The HappyHour Gem is a CLI application that will provide the top places in Brooklyn to have Happy Hour. You will be able to select a bar of your choice to find out detailed information.
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
