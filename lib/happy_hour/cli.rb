@@ -28,7 +28,7 @@ class HappyHour::CLI
         puts ""
         input = gets.strip.downcase
        if input.to_i > 0 && input.to_i <= HappyHour::Bar.all.length
-          bar = HappyHour::Bar.all[input.to_i]
+          bar = HappyHour::Bar.all[input.to_i -1]
         puts ""
         puts "#{bar.name}"
         puts "************************"
