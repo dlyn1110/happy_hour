@@ -35,7 +35,7 @@ class HappyHour::CLI
         puts "#{bar.description}"
         puts "************************"
         puts ""
-        puts "For main list of bars, type 'list', to leave, type 'exit'."
+        puts "For main list of bars, type 'list'. To leave, type 'exit'."
         elsif input == 'list'
           bar_list
         elsif input == 'exit'
