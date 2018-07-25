@@ -24,7 +24,7 @@ class HappyHour::CLI
      input = nil
       while input != 'exit'
         puts ""
-        puts "Enter number for details for bar of choice:"
+        puts "Enter number for details of bar of choice:"
         puts ""
         input = gets.strip.downcase
        if input.to_i > 0 && input.to_i <= HappyHour::Bar.all.length
